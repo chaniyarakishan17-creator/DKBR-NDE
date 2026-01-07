@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DKBRÆNDE - Premium Firewood & Fuel</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Lucide Icons (vanilla JS) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+  <body class="bg-[#F8F9F8] text-[#1A1C19]">
+    <div class="min-h-screen flex flex-col selection:bg-[#6DA34D] selection:text-white">
+      <!-- Top Header Section -->
+      <header class="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 max-w-7xl flex items-center justify-between gap-8">
+          <!-- Logo Section -->
+          <div class="flex items-center group cursor-pointer">
+            <div
+              class="relative w-12 h-12 bg-[#1B4332] rounded-xl flex items-center justify-center text-white shadow-lg overflow-hidden group-hover:rotate-3 transition-transform"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542332213-31f87348057f?auto=format&fit=crop&q=80&w=100&h=100"
+                alt="Firewood Logo"
+                class="w-full h-full object-cover opacity-80"
+              />
+              <div class="absolute inset-0 bg-[#1B4332]/20"></div>
+            </div>
+            <div class="ml-3 flex flex-col leading-none">
+              <span class="text-2xl font-black tracking-tight text-[#1B4332]"> DKBRÆNDE </span>
+              <span class="text-[10px] font-bold tracking-[0.2em] text-[#6DA34D] uppercase"> Premium Fuel </span>
+            </div>
+          </div>
+
+          <!-- Modern Search Bar -->
+          <div class="flex-1 max-w-xl hidden lg:block">
+            <div class="relative group">
+              <input
+                type="text"
+                placeholder="What are you looking for today?"
+                class="w-full pl-5 pr-12 py-3 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1B4332]/10 focus:bg-white focus:border-[#1B4332] transition-all text-sm"
+              />
+              <div
+                class="absolute right-4 top-1/2 -translate-y-1/2 p-1.5 bg-[#1B4332] rounded-lg text-white shadow-sm cursor-pointer hover:bg-[#2D6A4F] transition-colors"
+              >
+                <i data-lucide="search" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium Utility Links -->
+          <div class="flex items-center gap-2 md:gap-6">
+            <a
+              href="#"
+              class="flex flex-col items-center gap-1 group text-gray-500 hover:text-[#1B4332] transition-colors"
+            >
+              <div class="p-2 rounded-xl group-hover:bg-gray-100 transition-colors">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[10px] font-bold uppercase hidden md:inline">Support</span>
+            </a>
+            <a
+              href="#"
+              class="flex flex-col items-center gap-1 group text-gray-500 hover:text-[#1B4332] transition-colors"
+            >
+              <div class="p-2 rounded-xl group-hover:bg-gray-100 transition-colors">
+                <i data-lucide="user" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[10px] font-bold uppercase hidden md:inline">Account</span>
+            </a>
+            <a
+              href="#"
+              class="flex flex-col items-center gap-1 group relative text-gray-500 hover:text-[#1B4332] transition-colors"
+            >
+              <div class="p-2 rounded-xl group-hover:bg-gray-100 transition-colors">
+                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                <span
+                  class="absolute top-1 right-1 w-4 h-4 bg-[#D4A373] text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-white"
+                >
+                  0
+                </span>
+              </div>
+              <span class="text-[10px] font-bold uppercase hidden md:inline">Cart</span>
+            </a>
+            <button class="lg:hidden p-2 text-gray-500">
+              <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Navigation -->
+      <nav class="bg-[#1B4332] text-white overflow-x-auto no-scrollbar shadow-lg border-t border-white/10">
+        <div class="container mx-auto px-4 max-w-7xl">
+          <ul class="flex items-center justify-center h-14">
+            <li class="h-full relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center h-full px-5 text-[11px] font-bold tracking-[0.1em] hover:text-white/80 transition-all whitespace-nowrap"
+              >
+                CURRENT OFFERS
+              </a>
+            </li>
+            <li class="h-full relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center h-full px-5 text-[11px] font-bold tracking-[0.1em] hover:text-white/80 transition-all whitespace-nowrap"
+              >
+                PACKAGE DEALS
+              </a>
+            </li>
+            <li class="h-full relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center h-full px-5 text-[11px] font-bold tracking-[0.1em] hover:text-white/80 transition-all whitespace-nowrap"
+              >
+                DELIVERY
+              </a>
+            </li>
+            <li class="h-full relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center h-full px-5 text-[11px] font-bold tracking-[0.1em] hover:text-white/80 transition-all whitespace-nowrap"
+              >
+                FIREWOOD
+              </a>
+            </li>
+            <li class="h-full relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center h-full px-5 text-[11px] font-bold tracking-[0.1em] hover:text-white/80 transition-all whitespace-nowrap"
+              >
+                WOOD PELLETS
+              </a>
+            </li>
+            <li class="h-full relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center h-full px-5 text-[11px] font-bold tracking-[0.1em] hover:text-white/80 transition-all whitespace-nowrap"
+              >
+                WOOD BRIQUETTES
+              </a>
+            </li>
+            <li class="h-full relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center h-full px-5 text-[11px] font-bold tracking-[0.1em] hover:text-white/80 transition-all whitespace-nowrap"
+              >
+                BEDDING
+              </a>
+            </li>
+            <li class="h-full relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center h-full px-5 text-[11px] font-bold tracking-[0.1em] hover:text-white/80 transition-all whitespace-nowrap"
+              >
+                OUTLET
+              </a>
+            </li>
+            <li class="h-full relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center h-full px-5 text-[11px] font-bold tracking-[0.1em] hover:text-white/80 transition-all whitespace-nowrap"
+              >
+                ACCESSORIES
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content Area -->
+      <main class="flex-grow container mx-auto px-6 py-12 max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- Left/Main Column -->
+          <div class="lg:col-span-9 space-y-12">
+            <!-- Hero Section -->
+            <section class="relative h-[450px] md:h-[550px] rounded-[2rem] overflow-hidden shadow-2xl">
+              <!-- Background Image with optimized overlay -->
+              <div
+                class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1542332213-31f87348057f?auto=format&fit=crop&q=80&w=1600&h=800');"
+              >
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
+              </div>
+
+              <!-- Content Overlay -->
+              <div class="relative h-full flex items-center px-8 md:px-16">
+                <div class="max-w-2xl space-y-8">
+                  <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-bold tracking-widest uppercase"
+                  >
+                    <i data-lucide="truck" class="w-4 h-4 text-[#6DA34D]"></i>
+                    <span>Fastest Delivery in Denmark</span>
+                  </div>
+
+                  <div class="space-y-4">
+                    <h1 class="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight">
+                      Premium <span class="text-[#6DA34D]">Firewood</span> Solutions.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white/90 font-medium max-w-lg leading-relaxed">
+                      Sustainable, high-quality fuel delivered directly to your doorstep.
+                    </p>
+                  </div>
+
+                  <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                      class="group relative flex items-center justify-center gap-3 bg-[#1B4332] hover:bg-[#2D6A4F] text-white font-bold py-4 px-10 rounded-2xl shadow-xl transform transition hover:-translate-y-1 active:scale-95 uppercase tracking-wider text-sm"
+                    >
+                      <span>Explore Delivery</span>
+                      <i
+                        data-lucide="arrow-right"
+                        class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                      ></i>
+                    </button>
+                    <button
+                      class="flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-[#1B4332] font-bold py-4 px-10 rounded-2xl shadow-xl transform transition hover:-translate-y-1 active:scale-95 uppercase tracking-wider text-sm"
+                    >
+                      <span>Visit Outlet</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Trust Indicator Inset -->
+              <div
+                class="absolute bottom-8 right-8 hidden lg:flex items-center gap-6 px-8 py-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl"
+              >
+                <div class="text-white">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/60">Rating</p>
+                  <p class="text-xl font-black">Excellent 4.9/5</p>
+                </div>
+                <div class="h-8 w-px bg-white/20"></div>
+                <div class="text-white">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/60">Customers</p>
+                  <p class="text-xl font-black">15,000+</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Collection Section -->
+            <section>
+              <div class="flex items-end justify-between mb-8">
+                <div>
+                  <h2 class="text-3xl font-black text-[#1B4332] tracking-tight">Our Collection</h2>
+                  <div class="h-1.5 w-12 bg-[#D4A373] mt-2 rounded-full"></div>
+                </div>
+                <a
+                  href="#"
+                  class="text-sm font-bold text-[#6DA34D] hover:text-[#1B4332] transition-colors flex items-center gap-1 uppercase tracking-widest"
+                >
+                  View All Products
+                </a>
+              </div>
+
+              <!-- Product Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div
+                  class="group bg-white rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full overflow-hidden"
+                >
+                  <div class="px-6 pt-6 pb-2">
+                    <h3
+                      class="text-xl font-bold text-[#1B4332] group-hover:text-[#6DA34D] transition-colors"
+                    >
+                      Premium Firewood
+                    </h3>
+                    <p class="text-xs text-gray-500 font-medium mt-1">
+                      Kiln-dried beech and oak logs
+                    </p>
+                  </div>
+                  <div class="relative flex-grow px-6 py-4">
+                    <div class="absolute top-6 right-8 z-10">
+                      <span
+                        class="px-3 py-1 bg-[#D4A373] text-white text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg"
+                      >
+                        Bestseller
+                      </span>
+                    </div>
+                    <div
+                      class="relative w-full aspect-square bg-gray-50 rounded-2xl overflow-hidden"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1549413242-64687f847f9e?auto=format&fit=crop&q=80&w=600&h=600"
+                        alt="Premium Firewood"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="px-6 pb-6">
+                    <button
+                      class="group/btn w-full bg-[#F3F9F0] hover:bg-[#1B4332] text-[#1B4332] hover:text-white font-bold py-4 rounded-2xl transition-all duration-300 text-xs uppercase tracking-widest flex items-center justify-center gap-2"
+                    >
+                      <span>View Collection</span>
+                      <i
+                        data-lucide="chevron-right"
+                        class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div
+                  class="group bg-white rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full overflow-hidden"
+                >
+                  <div class="px-6 pt-6 pb-2">
+                    <h3
+                      class="text-xl font-bold text-[#1B4332] group-hover:text-[#6DA34D] transition-colors"
+                    >
+                      Wood Pellets
+                    </h3>
+                    <p class="text-xs text-gray-500 font-medium mt-1">
+                      High-energy 6mm &amp; 8mm pellets
+                    </p>
+                  </div>
+                  <div class="relative flex-grow px-6 py-4">
+                    <div class="absolute top-6 right-8 z-10">
+                      <span
+                        class="px-3 py-1 bg-[#D4A373] text-white text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg"
+                      >
+                        Premium
+                      </span>
+                    </div>
+                    <div
+                      class="relative w-full aspect-square bg-gray-50 rounded-2xl overflow-hidden"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1628163584061-f40498a49c65?auto=format&fit=crop&q=80&w=600&h=600"
+                        alt="Wood Pellets"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="px-6 pb-6">
+                    <button
+                      class="group/btn w-full bg-[#F3F9F0] hover:bg-[#1B4332] text-[#1B4332] hover:text-white font-bold py-4 rounded-2xl transition-all duration-300 text-xs uppercase tracking-widest flex items-center justify-center gap-2"
+                    >
+                      <span>View Collection</span>
+                      <i
+                        data-lucide="chevron-right"
+                        class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div
+                  class="group bg-white rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full overflow-hidden"
+                >
+                  <div class="px-6 pt-6 pb-2">
+                    <h3
+                      class="text-xl font-bold text-[#1B4332] group-hover:text-[#6DA34D] transition-colors"
+                    >
+                      Wood Briquettes
+                    </h3>
+                    <p class="text-xs text-gray-500 font-medium mt-1">
+                      Long-burning overnight compressed logs
+                    </p>
+                  </div>
+                  <div class="relative flex-grow px-6 py-4">
+                    <div class="absolute top-6 right-8 z-10">
+                      <span
+                        class="px-3 py-1 bg-[#D4A373] text-white text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg"
+                      >
+                        Special
+                      </span>
+                    </div>
+                    <div
+                      class="relative w-full aspect-square bg-gray-50 rounded-2xl overflow-hidden"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&q=80&w=600&h=600"
+                        alt="Wood Briquettes"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="px-6 pb-6">
+                    <button
+                      class="group/btn w-full bg-[#F3F9F0] hover:bg-[#1B4332] text-[#1B4332] hover:text-white font-bold py-4 rounded-2xl transition-all duration-300 text-xs uppercase tracking-widest flex items-center justify-center gap-2"
+                    >
+                      <span>View Collection</span>
+                      <i
+                        data-lucide="chevron-right"
+                        class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Information section -->
+            <section
+              class="relative bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 w-64 h-64 bg-[#F3F9F0] rounded-full -mr-32 -mt-32 opacity-50"
+              ></div>
+              <div class="relative z-10">
+                <h2 class="text-3xl font-black text-[#1B4332] mb-6 tracking-tight">
+                  Quality You Can Trust
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                  <div class="space-y-4">
+                    <p class="text-gray-600 leading-relaxed font-medium">
+                      At <span class="text-[#1B4332] font-bold">DKBRÆNDE</span>, we believe that fuel
+                      should be more than just functional—it should be sustainable, efficient, and
+                      delivered with care.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                      With over 15 years of industry expertise, we've refined our process to bring
+                      you kiln-dried wood that ignites instantly and wood pellets with the highest
+                      energy density on the market.
+                    </p>
+                  </div>
+                  <div class="bg-[#1B4332]/5 p-6 rounded-2xl border border-[#1B4332]/10">
+                    <h4
+                      class="font-bold text-[#1B4332] mb-2 uppercase tracking-widest text-xs"
+                    >
+                      E-Certified Partner
+                    </h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                      Your security is our priority. As a certified e-commerce partner, we guarantee
+                      safe transactions, data protection, and transparent shipping policies for
+                      every order.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right Sidebar -->
+          <aside class="lg:col-span-3">
+            <div class="space-y-8">
+              <!-- Contact Section -->
+              <section
+                class="bg-[#1B4332] p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden"
+              >
+                <div
+                  class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16"
+                ></div>
+                <div class="relative z-10">
+                  <div class="flex items-center gap-3 mb-6">
+                    <div class="p-2 bg-white/10 rounded-xl">
+                      <i data-lucide="phone" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">Need Help?</h3>
+                  </div>
+                  <div class="space-y-3 text-sm text-white/70 mb-8 font-medium">
+                    <div class="flex justify-between border-b border-white/10 pb-2">
+                      <span>Mon - Thu</span>
+                      <span class="text-white">09:00 - 15:00</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/10 pb-2">
+                      <span>Friday</span>
+                      <span class="text-white">09:00 - 12:00</span>
+                    </div>
+                  </div>
+                  <a
+                    href="tel:25323413"
+                    class="flex items-center justify-center gap-3 bg-[#6DA34D] hover:bg-[#5a8b3e] p-5 rounded-2xl shadow-lg transition-all group active:scale-95"
+                  >
+                    <span
+                      class="text-2xl font-black group-hover:scale-105 transition-transform"
+                    >
+                      25 32 34 13
+                    </span>
+                  </a>
+                </div>
+              </section>
+
+              <!-- Trustpilot Block -->
+              <section
+                class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 text-center"
+              >
+                <div class="flex flex-col items-center gap-2">
+                  <div class="flex items-center gap-1.5 text-[#00b67a]">
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <span
+                      class="font-black text-2xl text-[#1A1C19] tracking-tight"
+                    >
+                      Trustpilot
+                    </span>
+                  </div>
+                  <div class="flex gap-1.5 mt-2">
+                    <div
+                      class="w-8 h-8 bg-[#00b67a] flex items-center justify-center rounded-sm"
+                    >
+                      <i class="w-5 h-5 text-white fill-current" data-lucide="star"></i>
+                    </div>
+                    <div
+                      class="w-8 h-8 bg-[#00b67a] flex items-center justify-center rounded-sm"
+                    >
+                      <i class="w-5 h-5 text-white fill-current" data-lucide="star"></i>
+                    </div>
+                    <div
+                      class="w-8 h-8 bg-[#00b67a] flex items-center justify-center rounded-sm"
+                    >
+                      <i class="w-5 h-5 text-white fill-current" data-lucide="star"></i>
+                    </div>
+                    <div
+                      class="w-8 h-8 bg-[#00b67a] flex items-center justify-center rounded-sm"
+                    >
+                      <i class="w-5 h-5 text-white fill-current" data-lucide="star"></i>
+                    </div>
+                    <div
+                      class="w-8 h-8 bg-[#00b67a] flex items-center justify-center rounded-sm"
+                    >
+                      <i class="w-5 h-5 text-white fill-current" data-lucide="star"></i>
+                    </div>
+                  </div>
+                  <p class="text-sm text-gray-400 mt-3 font-medium">
+                    Rated <span class="font-bold text-gray-900">4.5 / 5</span> by our family
+                  </p>
+                </div>
+              </section>
+
+              <!-- Newsletter Section -->
+              <section class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100">
+                <div class="flex items-center gap-3 mb-4">
+                  <i data-lucide="mail-plus" class="w-5 h-5 text-[#1B4332]"></i>
+                  <h3 class="font-bold text-lg text-gray-800">Stay Updated</h3>
+                </div>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                  Join 2,500+ firewood enthusiasts for tips and special offers.
+                </p>
+                <div class="space-y-3">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1B4332]/10 focus:bg-white focus:border-[#1B4332] transition-all text-sm"
+                  />
+                  <button
+                    class="w-full bg-[#1B4332] hover:bg-[#2D6A4F] text-white font-bold py-4 rounded-2xl text-xs uppercase tracking-widest transition-all shadow-md"
+                  >
+                    Subscribe Now
+                  </button>
+                </div>
+              </section>
+
+              <!-- Payment Methods -->
+              <section class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100">
+                <p
+                  class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-300 mb-6 text-center"
+                >
+                  Secure Checkout
+                </p>
+                <div class="grid grid-cols-4 gap-4">
+                  <div
+                    class="bg-white aspect-[3/2] rounded-xl border border-gray-50 flex items-center justify-center p-2 shadow-sm hover:shadow-md hover:border-[#6DA34D]/20 transition-all cursor-pointer"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg"
+                      alt="Visa"
+                      class="max-h-full max-w-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all"
+                    />
+                  </div>
+                  <div
+                    class="bg-white aspect-[3/2] rounded-xl border border-gray-50 flex items-center justify-center p-2 shadow-sm hover:shadow-md hover:border-[#6DA34D]/20 transition-all cursor-pointer"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+                      alt="Mastercard"
+                      class="max-h-full max-w-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all"
+                    />
+                  </div>
+                  <div
+                    class="bg-white aspect-[3/2] rounded-xl border border-gray-50 flex items-center justify-center p-2 shadow-sm hover:shadow-md hover:border-[#6DA34D]/20 transition-all cursor-pointer"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Dankort_logo.svg"
+                      alt="Dankort"
+                      class="max-h-full max-w-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all"
+                    />
+                  </div>
+                  <div
+                    class="bg-white aspect-[3/2] rounded-xl border border-gray-50 flex items-center justify-center p-2 shadow-sm hover:shadow-md hover:border-[#6DA34D]/20 transition-all cursor-pointer"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/b/b2/MobilePay_Logo_2017.svg"
+                      alt="MobilePay"
+                      class="max-h-full max-w-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all"
+                    />
+                  </div>
+                  <div
+                    class="bg-white aspect-[3/2] rounded-xl border border-gray-50 flex items-center justify-center p-2 shadow-sm hover:shadow-md hover:border-[#6DA34D]/20 transition-all cursor-pointer"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Apple_Pay_logo.svg"
+                      alt="Apple Pay"
+                      class="max-h-full max-w-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all"
+                    />
+                  </div>
+                  <div
+                    class="bg-white aspect-[3/2] rounded-xl border border-gray-50 flex items-center justify-center p-2 shadow-sm hover:shadow-md hover:border-[#6DA34D]/20 transition-all cursor-pointer"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg"
+                      alt="Google Pay"
+                      class="max-h-full max-w-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all"
+                    />
+                  </div>
+                  <div
+                    class="bg-white aspect-[3/2] rounded-xl border border-gray-50 flex items-center justify-center p-2 shadow-sm hover:shadow-md hover:border-[#6DA34D]/20 transition-all cursor-pointer"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Maestro_2016.svg"
+                      alt="Maestro"
+                      class="max-h-full max-w-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all"
+                    />
+                  </div>
+                  <div
+                    class="bg-white aspect-[3/2] rounded-xl border border-gray-50 flex items-center justify-center p-2 shadow-sm hover:shadow-md hover:border-[#6DA34D]/20 transition-all cursor-pointer"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/0/00/Visa_Electron.svg"
+                      alt="Visa Electron"
+                      class="max-h-full max-w-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all"
+                    />
+                  </div>
+                </div>
+              </section>
+
+              <!-- E-Certified Label -->
+              <section
+                class="bg-[#0089C4] p-6 rounded-[2rem] shadow-xl text-white group cursor-pointer overflow-hidden relative"
+              >
+                <div
+                  class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"
+                ></div>
+                <div class="relative flex items-center justify-center gap-4">
+                  <div
+                    class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#0089C4] shadow-lg"
+                  >
+                    <i data-lucide="shield-check" class="w-7 h-7"></i>
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="text-xs font-bold uppercase tracking-widest opacity-80"
+                    >
+                      Verified Safe
+                    </span>
+                    <span
+                      class="text-2xl font-black italic tracking-tighter uppercase"
+                    >
+                      e-certified
+                    </span>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Support Charity -->
+              <section
+                class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center group cursor-pointer"
+              >
+                <div class="relative w-24 h-24 mb-6">
+                  <div
+                    class="absolute inset-0 bg-[#6DA34D]/5 rounded-full group-hover:scale-125 transition-transform duration-700"
+                  ></div>
+                  <div
+                    class="relative w-full h-full bg-gray-50 rounded-full border border-gray-100 flex items-center justify-center overflow-hidden p-3 shadow-inner"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=150&h=150"
+                      alt="Christmas Seal Foundation"
+                      class="rounded-full grayscale group-hover:grayscale-0 transition-all duration-700"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <p
+                    class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em] mb-1"
+                  >
+                    We Proudly Support
+                  </p>
+                  <p class="text-sm font-black text-gray-800">
+                    Christmas Seal Foundation
+                  </p>
+                </div>
+              </section>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <!-- Premium Footer -->
+      <footer class="bg-[#1B4332] text-white py-16 border-t border-white/10">
+        <div class="container mx-auto px-6 max-w-7xl">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-8"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1520110120835-c96a9f9b916a?auto=format&fit=crop&q=80&w=100&h=100"
+                  class="w-full h-full object-cover rounded-xl opacity-50"
+                  alt=""
+                />
+              </div>
+              <span class="text-2xl font-black tracking-tight">DKBRÆNDE</span>
+            </div>
+            <div
+              class="flex gap-8 text-xs font-bold tracking-widest uppercase text-white/60"
+            >
+              <a href="#" class="hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+              <a href="#" class="hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+              <a href="#" class="hover:text-white transition-colors">Cookies</a>
+            </div>
+            <p class="text-sm text-white/40">
+              &copy; <span id="current-year"></span> DKBRÆNDE. Crafted for warmth.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
